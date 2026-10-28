@@ -5,32 +5,49 @@ import javax.persistence.Id;
 
 @Entity
 public class Categoria {
-    
-    @Id
-    private Integer cod;
-    private String descricao;
-    private String ativo;
 
-    public Categoria() {
-    }
+	@Id
+	private Integer cod;
 
-    public Categoria(Integer cod, String descricao, String ativo) {
-        this.cod = cod;
-        this.descricao = descricao;
-        this.ativo = ativo;
-    }
+	private String descricao;
 
-    public Integer getCod() { return cod; }
-    public void setCod(Integer cod) { this.cod = cod; }
+	private String ativo;
 
-    public String getDescricao() { return descricao; }
-    public void setDescricao(String descricao) { this.descricao = descricao; }
+	public Categoria() {
+	}
 
-    public String getAtivo() { return ativo; }
-    public void setAtivo(String ativo) { this.ativo = ativo; }
+	public Categoria(Integer cod, String descricao, String ativo) {
+		this.cod = cod;
+		this.descricao = descricao;
+		this.ativo = ativo;
+	}
 
-    @Override
-    public String toString() {
-        return "Categoria [Código=" + cod + ", Descrição=" + descricao + ", Ativo=" + ativo + "]";
-    }
+	public Integer getCod() {
+		return cod;
+	}
+
+	public void setCod(Integer cod) {
+		this.cod = cod;
+	}
+
+	public String getDescricao() {
+		return descricao;
+	}
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+
+	public String getAtivo() {
+		return ativo;
+	}
+
+	public void setAtivo(String ativo) {
+		this.ativo = ativo;
+	}
+
+	@Override
+	public String toString() {
+		return "Categoria [cod=" + cod + ", descricao=" + descricao + ", ativo=" + ativo + "]";
+	}
 }
